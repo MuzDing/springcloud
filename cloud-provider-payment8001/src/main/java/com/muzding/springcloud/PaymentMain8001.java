@@ -1,4 +1,4 @@
-package com.liding.springcloud;
+package com.muzding.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PaymentMain8001 {
     public static void main(String[] args) {
         SpringApplication.run(PaymentMain8001.class,args);
-        System.out.println("李丁service is ok....");
+        System.out.println("service is ok....");
     }
 }

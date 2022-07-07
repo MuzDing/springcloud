@@ -1,4 +1,4 @@
-package com.liding.springcloud.entity;
+package com.muzding.springcloud.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,7 +12,7 @@ public class CommonResult<T> {
     private String message;
     private T data;
 
-    public CommonResult(Integer code,String message)
+    public CommonResult(Integer code, String message)
     {
         this(code,message,null);
     }

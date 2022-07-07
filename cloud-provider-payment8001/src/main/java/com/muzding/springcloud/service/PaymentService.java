@@ -1,7 +1,7 @@
-package com.liding.springcloud.service;
+package com.muzding.springcloud.service;
 
-import com.liding.springcloud.dao.PaymentDao;
-import com.liding.springcloud.entity.Payment;
+import com.muzding.springcloud.dao.PaymentDao;
+import com.muzding.springcloud.entity.Payment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
