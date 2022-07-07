@@ -14,7 +14,7 @@ import java.util.Map;
 @RestController
 public class OrderControl {
 
-    public static final String url = "http://192.168.101.12:8001";
+    public static final String url = "http://CLOUD-PAYMENT-SERVICE";
     @Autowired
     private RestTemplate restTemplate;
 
@@ -31,5 +31,11 @@ public class OrderControl {
     @RequestMapping(value = "/consumer/fingPaymentByid",method = RequestMethod.GET)
     public CommonResult create (@RequestParam Long id){
         return restTemplate.getForObject(url + "/fingPaymentByid?id="+ id,CommonResult.class);
+    }
+
+    // 通过生产者 消费者模型调用
+    @RequestMapping(value = "/consumer/discovery",method = RequestMethod.GET)
+    public CommonResult discovery (){
+        return restTemplate.getForObject(url + "/discovery" ,CommonResult.class);
     }
 }
