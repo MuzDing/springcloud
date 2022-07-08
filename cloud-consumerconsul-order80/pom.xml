@@ -9,25 +9,22 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-consumer-order80</artifactId>
+    <artifactId>cloud-consumerconsul-order80</artifactId>
 
 
     <dependencies>
-        <!-- 服务注册中心的客户端端 eureka-client -->
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka-server -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-consul-discovery -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
 
-
-        <!-- 引入自己定义的api通用包 -->
         <dependency>
             <groupId>com.muzding.cn</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>${project.version}</version>
-            <scope>compile</scope>
         </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>
@@ -64,12 +61,6 @@
         </dependency>
 
 
-
-        <!--        &lt;!&ndash;包含了sleuth+zipkin&ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.cloud</groupId>-->
-        <!--            <artifactId>spring-cloud-starter-zipkin</artifactId>-->
-        <!--        </dependency>-->
-
     </dependencies>
+
 </project>
