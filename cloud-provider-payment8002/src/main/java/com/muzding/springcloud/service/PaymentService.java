@@ -16,7 +16,7 @@ public class PaymentService {
         paymentDao.save(pament);
     }
 
-    public Optional<Payment> fingPaymentByid(Long id){
+    public Optional<Payment> findPaymentByid(Long id){
         return paymentDao.findById(id);
     }
 

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
@@ -39,10 +40,10 @@ public class PaymentControl {
         return new CommonResult(1,"插入数据库成功" + serverPort,null);
     }
 
-    @RequestMapping(value = "/fingPaymentByid",method = RequestMethod.GET)
-    public CommonResult fingPaymentByid(@RequestParam Long id){
+    @RequestMapping(value = "/findPaymentByid",method = RequestMethod.GET)
+    public CommonResult findPaymentByid(@RequestParam Long id){
         log.info("查询成功");
-        return new CommonResult(1,"查询成功" + serverPort,paymentService.fingPaymentByid(id));
+        return new CommonResult(1,"查询成功" + serverPort,paymentService.findPaymentByid(id));
     }
 
     @RequestMapping(value = "/discovery",method = RequestMethod.GET)
@@ -50,6 +51,17 @@ public class PaymentControl {
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
         log.info("查询成功");
         return new CommonResult(1,"查询成功 " + serverPort ,instances);
+    }
+
+    @RequestMapping(value = "/payment/feign/timeout",method = RequestMethod.GET)
+    public String paymentFeignTimeOut(){
+        log.info("8002被调用");
+        try{
+            TimeUnit.SECONDS.sleep(6);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return serverPort;
     }
 
     @RequestMapping(value = "/test",method = RequestMethod.POST)
