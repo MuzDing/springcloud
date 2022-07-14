@@ -18,6 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
+@RequestMapping(value = "ss2")
 public class PaymentControl {
 
     @Autowired
