@@ -1,4 +1,4 @@
-package springcloud.control;
+package com.muzdin.springcloud.control;
 
 import com.muzding.springcloud.entity.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;

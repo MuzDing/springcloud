@@ -1,15 +1,14 @@
-package com.muzding.springcloud;
+package com.muzdin.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-@EnableEurekaClient
-public class CloudConfigClient3355 {
-    public static void main(String[] args) {
-        SpringApplication.run(CloudConfigClient3355.class, args);
-        System.out.println("启动成功");
+public class CloudStreamRabbitmqConsumer8803 {
 
+    public static void main(String[] args) {
+        SpringApplication.run(CloudStreamRabbitmqConsumer8803.class, args);
+        System.out.println("启动成功");
     }
+
 }
