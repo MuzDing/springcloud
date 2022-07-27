@@ -7,10 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -18,7 +15,6 @@ import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
-@RequestMapping(value = "ss2")
 public class PaymentControl {
 
     @Autowired
@@ -67,5 +63,10 @@ public class PaymentControl {
     @RequestMapping(value = "/test",method = RequestMethod.POST)
     public String createPay1(@RequestParam String serial){
         return serial;
+    }
+
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin(){
+        return "hi , i am paymentzipkin server fall back,welcome to muzding";
     }
 }

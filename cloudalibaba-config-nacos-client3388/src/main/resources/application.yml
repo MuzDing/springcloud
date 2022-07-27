@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: nacos-config-client
+  profiles:
+    active: prod
+#    active: test # 表示测试环境
+    #active: info
+server:
+  port: 3388
+
